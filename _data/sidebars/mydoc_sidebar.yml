@@ -1,0 +1,39 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: Evaluation Tool
+  version: 0.1
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage.html
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage.html
+      output: pdf
+      type: frontmatter
+
+  - title: Overview
+    output: web, pdf
+    folderitems:
+
+    - title: Accessing the tool
+      url: /index.html
+      output: web, pdf
+      type: homepage
+
+
+  - title: Use Cases
+    output: web, pdf
+    folderitems:
+
+    - title: ALARM
+      url: /alarm.html
+      output: web, pdf
+
