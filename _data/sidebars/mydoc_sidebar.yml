@@ -37,3 +37,41 @@ entries:
       url: /alarm.html
       output: web, pdf
 
+  - title: Glossary
+    output: web, pdf
+    folderitems:
+
+    - title: Skeleton
+      url: /skeleton.html
+      output: web, pdf
+
+    - title: V-Structures
+      url: /v_structures.html
+      output: web, pdf
+
+    - title: Edges/Arcs
+      url: /edges.html
+      output: web, pdf
+
+    - title: Metrics
+      url: /metrics.html
+      output: web, pdf
+
+    - title: Imbalance
+      url: /imbalance.html
+      output: web, pdf
+
+  - title: Appendix
+    output: web, pdf
+    folderitems:
+
+    - title: Benchmarks
+      url: /benchmark.html
+      output: web, pdf
+
+
+    - title: Parameter Graph
+      url: /param_graph.html
+      output: web, pdf
+
+

@@ -17,7 +17,7 @@ As the network is expertly constructed, it has a **ground truth** structure whic
 
 {% include image.html file="ALARM_SVG.svg" alt="Alarm Network" caption="The ALARM structure visualized" max-width="600" %}
 
-In this example, the tool will be use to estimate the expected performances of multiple structure learning algorithms. As we have access to the ground truth, we will then validate these estimates.
+In this example, the tool will be use to estimate the expected performances of multiple structure learning algorithms. As we have access to the ground truth, we will then validate these estimates. Bare in mind, this is **not** a typical step, but a demonstration of the validity of the tool.
 
 {% include note.html content="The ALARM network, as well as the corresponding data, is available in the [bnlearn package](http://www.bnlearn.com/)" %}
 
@@ -80,20 +80,23 @@ The following are the steps to estimate the performance of the alarm network:
 2. The algorithm is then selected, in this case PC (Constraint-Based).
 3. The **Estimate** button is pressed.
 
-The tool will change the properties to match the closest experiments performed by the synthetic evaluation tool.
+{% include note.html content="The tool will change the entered properties to match the closest experiments performed by the synthetic evaluation tool." %}
 
 {% include image.html file="tool_1.png" alt="Table Results" caption="The first part of a tool, where results are presented in table format" max-width="800" %}
 
+The results will then be updated in the table, giving both Skeleton and V-Structure performance (for more information on what this means, [click here](/skeleton.html)). This information can then be used to to determine if the performance is *sufficient* for your requirements.
+If not, or if further investigation is desired, the next component of the tool, surface plots, can be used to investigate the performance space of your dataset, and help identify how performance could be improved.
+
 #### Surface Plots
 
-In the same manner, the properties of the ALARM dataset are input into the options. In this case, this is only the Maximum Levels. The user can then investigate the performance of the Sample/Variable space for the properties of the ALARM network.
+In a similar manner, the properties of the Alarm dataset are input into the Options, excluding Variables and Samples as these are the space we are exploring. So in the case of Phase I, this is only the Maximum Levels. The user can then investigate the performance of the Sample/Variable space for the properties of the ALARM network.
 
 {% include image.html file="tool_2.png" alt="Surface Plots" caption="The second part of the tool, where the experiment data is used to create a surface plot of performance" max-width="800" %}
 
 
 ### Validating the performance
 
-The true performance of the PC Algorithm in this case is the following:
+The true performance of the PC Algorithm on the ALARM dataset is the following:
 
 | Aspect | Precision | Recall | F1 |
 |-------|--------|---------|---------|
