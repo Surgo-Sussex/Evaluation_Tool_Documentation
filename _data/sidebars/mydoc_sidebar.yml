@@ -61,6 +61,10 @@ entries:
       url: /imbalance.html
       output: web, pdf
 
+    - title: Levels
+      url: /levels.html
+      output: web, pdf
+
   - title: Appendix
     output: web, pdf
     folderitems:
