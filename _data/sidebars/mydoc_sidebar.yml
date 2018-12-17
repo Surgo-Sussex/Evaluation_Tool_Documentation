@@ -40,6 +40,10 @@ entries:
   - title: Glossary
     output: web, pdf
     folderitems:
+    
+    - title: DAG
+      url: /dag.html
+      output: web, pdf
 
     - title: Skeleton
       url: /skeleton.html
@@ -47,10 +51,6 @@ entries:
 
     - title: V-Structures
       url: /v_structures.html
-      output: web, pdf
-
-    - title: Edges/Arcs
-      url: /edges.html
       output: web, pdf
 
     - title: Metrics
@@ -76,6 +76,10 @@ entries:
 
     - title: Parameter Graph
       url: /param_graph.html
+      output: web, pdf
+
+    - title: Structure Learning Algorithms
+      url: /sl_algorithms.html
       output: web, pdf
 
 

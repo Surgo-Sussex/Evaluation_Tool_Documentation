@@ -1,8 +1,7 @@
 ---
 title: "Use Case: ALARM Dataset"
-tags: [getting_started]
-keywords: release notes, announcements, what's new, new features
-last_updated: July 16, 2016
+tags: [use_case]
+keywords: Use Case
 summary: "This guide will walk you through using the tool with a standard bayesian network benchmarking dataset; ALARM."
 sidebar: mydoc_sidebar
 permalink: alarm.html
@@ -23,7 +22,7 @@ In this example, the tool will be use to estimate the expected performances of m
 
 ## Phase I
 
-As previously explained in the [overview](/index.html), the tool has 2 phases, and this use-case will first discuss phase I.
+As previously explained in the [overview](index.html), the tool has 2 phases, and this use-case will first discuss phase I.
 
 ### Determining the properties of the dataset
 
@@ -84,7 +83,7 @@ The following are the steps to estimate the performance of the alarm network:
 
 {% include image.html file="tool_1.png" alt="Table Results" caption="The first part of a tool, where results are presented in table format" max-width="800" %}
 
-The results will then be updated in the table, giving both Skeleton and V-Structure performance (for more information on what this means, [click here](/skeleton.html)). This information can then be used to to determine if the performance is *sufficient* for your requirements.
+The results will then be updated in the table, giving both Skeleton and V-Structure performance (for more information on what this means, [click here](skeleton.html)). This information can then be used to to determine if the performance is *sufficient* for your requirements.
 If not, or if further investigation is desired, the next component of the tool, surface plots, can be used to investigate the performance space of your dataset, and help identify how performance could be improved.
 
 #### Surface Plots
