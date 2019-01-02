@@ -1198,3 +1198,12 @@ h4.panel-title {
         display:block !important;
     }
 }
+
+
+.center {
+    margin-top: 2em !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+}

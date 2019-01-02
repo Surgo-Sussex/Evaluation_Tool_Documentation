@@ -11,7 +11,7 @@ folder: mydoc
 
 Mentioned in the [DAG](dag.html) section, markov equivelence is the property that a set of conditional independence relationships can encode multiple DAGs. This set of DAGs is known as the eqiuivelence class, and can be depicted by a single graph known as a Complete Partially Directed Acyclic Graph, or CPDAG.
 
-\[CPDAG Example\]
+{% include image.html file="cpdag.svg" alt="" caption="The CPDAG of the example DAG given <a href='/dag.html'>here</a>. Notice some edges are undirected." max-width="800" %}
 
 There are three cases where direction can be enforced:
 
