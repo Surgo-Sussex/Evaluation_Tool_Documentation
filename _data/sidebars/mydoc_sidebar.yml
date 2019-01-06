@@ -37,6 +37,10 @@ entries:
       url: /alarm.html
       output: web, pdf
 
+    - title: Barley
+      url: /barley.html
+      output: web, pdf
+
   - title: Glossary
     output: web, pdf
     folderitems:
