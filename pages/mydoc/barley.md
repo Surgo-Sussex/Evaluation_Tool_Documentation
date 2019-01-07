@@ -101,6 +101,15 @@ In the case of barley, we find the data is **extremely** imbalanced, with an est
 
 From this updated estimation, we can see that expected performance is very poor - and it is not reccomended to proceed with any of the structure learning algorithms currently benchmarked in this tool.
 
+The true performance of the Barley dataset is as follows:
+
+| Aspect | Precision | Recall | F1 |
+|-------|--------|---------|---------|
+| Skeleton | 1 | 0.4 | 0.57 |
+| V-Structures | 0.4 | 0.03 | 0.056 |
+
+Which fall within expected performance given by the tool.
+
 ## Surface Plots
 
 The surface plot section of the tool can be used to investigate the variable/sample space of the expected performance of the algorithms, to determine if there are any adjustments a user could make to the dataset to improve performance.
