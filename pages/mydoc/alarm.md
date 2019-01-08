@@ -65,13 +65,11 @@ Once these properties have been determined, phase I of the tool can be used to g
 
 | Samples | 20,000 | 
 | Variables | 37| 
-| Maximum Levels | 4 | 
+| Average Levels | 4 | 
 
 ### Using the tool
 
 The tool has two seperate user interfaces, and whilst they provide similar information, they have different purposes.
-
-#### Table Results
 
 The following are the steps to estimate the performance of the alarm network:
 
@@ -79,18 +77,37 @@ The following are the steps to estimate the performance of the alarm network:
 2. The algorithm is then selected, in this case PC (Constraint-Based).
 3. The **Estimate** button is pressed.
 
-{% include note.html content="The tool will change the entered properties to match the closest experiments performed by the synthetic evaluation tool." %}
 
-{% include image.html file="tool_1.png" alt="Table Results" caption="The first part of a tool, where results are presented in table format" max-width="800" %}
+{% include image.html file="alarm_usage1.png" alt="Table Results" caption="The first part of a tool, where results for each benchmarked algorithm is shown as a box-plot" max-width="800" %}
 
-The results will then be updated in the table, giving both Skeleton and V-Structure performance (for more information on what this means, [click here](skeleton.html)). This information can then be used to to determine if the performance is *sufficient* for your requirements.
-If not, or if further investigation is desired, the next component of the tool, surface plots, can be used to investigate the performance space of your dataset, and help identify how performance could be improved.
+The results will then be updated, giving both Skeleton and V-Structure performance (for more information on what this means, [click here](metrics.html)) available from the drop-down. This information can then be used to to determine if the performance is *sufficient* for your requirements.
 
-#### Surface Plots
+## Phase II
 
-In a similar manner, the properties of the Alarm dataset are input into the Options, excluding Variables and Samples as these are the space we are exploring. So in the case of Phase I, this is only the Maximum Levels. The user can then investigate the performance of the Sample/Variable space for the properties of the ALARM network.
+In this phase, the learnt structure from phase I and the dataset are used to estimate the imbalance. We do this as imbalance can have a severe effect on performance.
 
-{% include image.html file="tool_2.png" alt="Surface Plots" caption="The second part of the tool, where the experiment data is used to create a surface plot of performance" max-width="800" %}
+To estimate the imbalance, we will be making use of a function from the **bnlearn** package, **alpha.star**. This algorithm requires a structure, and assosiated dataset and produces a BDE ISS (Alpha), which corresponds to the imbalance in the estimation tool.
+
+```r
+#Learn a prelimanary structure
+alarm.structure <- bnlearn::pc(alarm)
+
+#extend the CPDAG learnt from PC to a DAG
+alarm.structure <- bnlearn::cextend(alarm.structure)
+
+#Estimate the Imbalance
+print(bnlearn::alpha.star(alarm.structure, alarm))
+````
+
+In this case, we find the alpha 8.7, and we update this in our tool appropraitely. 
+
+{% include image.html file="alarm_usage2.png" alt="Barley Network" caption="A revised estimate of our structure learning performance, making use of imbalance" max-width="600" %}
+
+## Surface Plots
+
+The surface plot section of the tool can be used to investigate the variable/sample space of the expected performance of the algorithms, to determine if there are any adjustments a user could make to the dataset to improve performance.
+
+{% include image.html file="barley_surface.png" alt="Barley Network" caption="An image of the surface plot tool" max-width="600" %}
 
 
 ### Validating the performance
@@ -104,4 +121,3 @@ The true performance of the PC Algorithm on the ALARM dataset is the following:
 
 Which falls within the estimatation of the tool.
 
-## Phase II

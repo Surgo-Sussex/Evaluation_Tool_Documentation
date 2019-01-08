@@ -24,3 +24,18 @@ Learning bayesian network structure relies upon each variable having a different
 
 
 ## How to estimate imbalance
+
+To estimate the imbalance, we will be making use of a function from the **bnlearn** package, **alpha.star**. This algorithm requires a structure, and assosiated dataset and produces a BDE ISS (Alpha), which corresponds to the imbalance in the estimation tool.
+
+```r
+#Learn a prelimanary structure
+barley.structure <- bnlearn::pc(barley)
+
+#extend the CPDAG learnt from PC to a DAG
+barley.structure <- bnlearn::cextend(barley.structure)
+
+#Estimate the Imbalance
+print(bnlearn::alpha.star(barley.structure, barley))
+````
+
+In the case of barley, we find the data is **extremely** imbalanced, with an estimated alpha of 0.08.
